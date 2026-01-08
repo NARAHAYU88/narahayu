@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Ayu Medica Center</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#eef1ff,#f9fbff);
+color:#333;
+}
+.layout{display:flex;min-height:100vh}
+
+/* SIDEBAR */
+.sidebar{
+width:260px;
+background:linear-gradient(180deg,#4f46e5,#312e81);
+color:white;
+padding:30px 20px;
+}
+.sidebar h2{text-align:center;letter-spacing:2px;margin-bottom:35px}
+.sidebar a{
+display:block;padding:14px 16px;margin-bottom:12px;
+border-radius:14px;cursor:pointer;transition:.35s;font-weight:500
+}
+.sidebar a:hover{
+background:rgba(255,255,255,.25);
+transform:translateX(8px)
+}
+
+/* CONTENT */
+.content{flex:1;padding:40px}
+.card{
+background:white;border-radius:26px;padding:40px;margin-bottom:40px;
+box-shadow:0 20px 60px rgba(0,0,0,.15)
+}
+section{display:none}
+section.active{display:block}
+
+/* HERO */
+.hero{
+background:linear-gradient(135deg,#4f46e5,#6366f1);
+color:white;border-radius:30px;padding:70px;
+box-shadow:0 30px 90px rgba(79,70,229,.55)
+}
+.hero h1{font-size:44px;margin-bottom:14px}
+.hero p{font-size:18px;opacity:.95}
+
+/* HERO IMAGE */
+.hero-img{
+display:flex;gap:30px;flex-wrap:wrap;justify-content:center;margin-top:40px
+}
+.hero-img img{
+width:180px;height:180px;border-radius:50%;
+object-fit:cover;border:6px solid white;
+box-shadow:0 15px 45px rgba(0,0,0,.35)
+}
+
+/* STAT */
+.stat-grid{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;margin-top:50px
+}
+.stat{
+background:linear-gradient(135deg,#6366f1,#312e81);
+color:white;padding:32px;border-radius:22px;
+text-align:center;box-shadow:0 18px 45px rgba(0,0,0,.35)
+}
+.stat h2{font-size:40px;margin:0}
+
+/* GRID */
+.grid{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;margin-top:30px
+}
+.box{
+background:rgba(255,255,255,.9);
+padding:30px;border-radius:26px;
+box-shadow:0 15px 45px rgba(0,0,0,.18);
+transition:.4s;position:relative;text-align:center
+}
+.box:hover{transform:translateY(-12px)}
+.box img{
+width:100%;height:200px;object-fit:cover;border-radius:18px;margin-bottom:15px
+}
+.badge{
+position:absolute;top:18px;right:18px;
+background:gold;color:#000;
+padding:6px 16px;border-radius:20px;
+font-size:12px;font-weight:700
+}
+
+/* FORM */
+input,select,textarea,button{
+width:100%;padding:16px;border-radius:14px;
+margin-top:8px;margin-bottom:16px;
+border:1px solid #ccc;font-size:15px
+}
+button{
+background:linear-gradient(135deg,#4f46e5,#312e81);
+color:white;border:none;font-weight:700;cursor:pointer
+}
+
+/* TABLE */
+table{width:100%;border-collapse:collapse;margin-top:20px}
+th{background:#4f46e5;color:white;padding:14px}
+td{padding:14px;border-bottom:1px solid #ddd;text-align:center}
+.btn-edit{background:#f59e0b;color:white;padding:8px 12px;border-radius:10px}
+.btn-hapus{background:#e74c3c;color:white;padding:8px 12px;border-radius:10px}
+
+/* FOOTER */
+footer{text-align:center;color:#777;margin-top:40px}
+</style>
+</head>
+
+<body>
+<div class="layout">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+<h2>AYU MEDICA</h2>
+<a onclick="show('beranda')">🏠 Beranda</a>
+<a onclick="show('layanan')">💉 Layanan</a>
+<a onclick="show('dokter')">👨‍⚕️ Dokter</a>
+<a onclick="show('obat')">💊 Obat Premium</a>
+<a onclick="show('pelayanan')">🏆 Pelayanan</a>
+<a onclick="show('daftar')">📝 Pendaftaran</a>
+<a onclick="show('data')">📊 Data Pendaftaran</a>
+<a onclick="show('kontak')">📞 Kontak</a>
+</aside>
+
+<main class="content">
+
+<!-- BERANDA -->
+<section id="beranda" class="active">
+<div class="hero">
+<h1>Luxury Healthcare, Redefined</h1>
+<p>Pusat layanan kesehatan ultra-premium dengan standar internasional dan privasi eksklusif.</p>
+
+<div class="hero-img">
+<img src ="ayu1.jpg">
+<img src ="ayu3.jpg">
+<img src ="ayu4.jpg">
+<img src ="ayyu.jpg">
+<img src ="ayuu3.jpg">
+</div>
+</div>
+
+<div class="stat-grid">
+<div class="stat"><h2>9.800+</h2>Pasien Puas</div>
+<div class="stat"><h2>20+</h2>Tahun Pengalaman</div>
+<div class="stat"><h2>30+</h2>Dokter Spesialis</div>
+<div class="stat"><h2>24/7</h2>Pelayanan VIP</div>
+</div>
+</section>
+
+<!-- LAYANAN -->
+<section id="layanan">
+<div class="card">
+<h2>Layanan Medis Premium</h2>
+<div class="grid">
+<div class="box"><span class="badge">VIP</span><img src ="ayu11.jpg">Executive Medical Check-Up</div>
+<div class="box"><span class="badge">Premium</span><img src ="ayu12.jpg">Cardiovascular Center</div>
+<div class="box"><span class="badge">Luxury</span><img src ="ayu13.jpg">Estetika & Anti-Aging</div>
+<div class="box"><span class="badge">Exclusive</span><img src ="ayu15.jpg">Mother & Child Care</div>
+</div>
+</div>
+</section>
+
+<!-- DOKTER -->
+<section id="dokter">
+<div class="card">
+<h2>Tim Dokter Spesialis</h2>
+<div class="grid">
+<div class="box">🩺 dr. Martin<br>Penyakit Dalam</div>
+<div class="box">❤️ dr. Ayu<br>Spesialis Jantung</div>
+<div class="box">🧠 dr. Daniel<br>Spesialis Saraf</div>
+<div class="box">👶 dr. Rina<br>Spesialis Anak</div>
+<div class="box">✨ dr. Clara<br>Estetika Medis</div>
+</div>
+</div>
+</section>
+
+<!-- OBAT -->
+<section id="obat">
+<div class="card">
+<h2>Obat & Terapi Premium</h2>
+<div class="grid">
+<div class="box"><span class="badge">VIP</span><img src="ayu18.jpg">Stem Cell Therapy<br><b>Rp120.000.000</b></div>
+<div class="box"><span class="badge">Luxury</span><img src="ayu19.jpg">Neuro Vital Injection<br><b>Rp45.000.000</b></div>
+<div class="box"><span class="badge">Premium</span><img src="ayu20.jpg">Immuno Platinum Infusion<br><b>Rp30.000.000</b></div>
+<div class="box"><span class="badge">Exclusive</span><img src="ayu21.jpg">Anti-Aging Booster<br><b>Rp25.000.000</b></div>
+</div>
+</div>
+</section>
+
+<!-- PELAYANAN -->
+<section id="pelayanan">
+<div class="card">
+<h2>Pelayanan Eksklusif</h2>
+<div class="grid">
+<div class="box"><img src="ayu24.jpg">VIP Lounge</div>
+<div class="box"><img src="ayu23.jpg">Private Doctor</div>
+<div class="box"><img src="ayu26.jpg">Emergency 24 Jam</div>
+</div>
+</div>
+</section>
+
+<!-- PENDAFTARAN -->
+<section id="daftar">
+<div class="card">
+<h2>Pendaftaran Pasien</h2>
+<form onsubmit="simpan(event)">
+<input id="nama" placeholder="Nama Lengkap" required>
+<input id="umur" type="number" placeholder="Umur" required>
+<select id="jk"><option>Laki-laki</option><option>Perempuan</option></select>
+<select id="layananP">
+<option>Executive Medical Check-Up</option>
+<option>Konsultasi Jantung</option>
+<option>Konsultasi Saraf</option>
+<option>Estetika Medis</option>
+<option>Mother & Child Care</option>
+</select>
+<textarea id="keluhan" placeholder="Keluhan"></textarea>
+<button>Daftar Sekarang</button>
+</form>
+</div>
+</section>
+
+<!-- DATA -->
+<section id="data">
+<div class="card">
+<h2>Data Pendaftaran</h2>
+<table>
+<thead>
+<tr><th>Nama</th><th>Umur</th><th>JK</th><th>Layanan</th><th>Keluhan</th><th>Aksi</th></tr>
+</thead>
+<tbody id="table"></tbody>
+</table>
+</div>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak">
+<div class="card">
+<h2>Kontak</h2>
+<div class="grid">
+<div class="box">📍 Jl. Sehat No.10 Jakarta</div>
+<div class="box">📞 0812-3456-7890</div>
+<div class="box">✉ info@ayumedica.com</div>
+</div>
+</div>
+</section>
+
+<footer>© 2026 Ayu Medica Center — Premium Medical Experience</footer>
+
+</main>
+</div>
+
+<script>
+let data=[],editIndex=-1;
+function show(id){
+document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+function simpan(e){
+e.preventDefault();
+let obj={n:nama.value,u:umur.value,j:jk.value,l:layananP.value,k:keluhan.value};
+if(editIndex==-1){data.push(obj)}else{data[editIndex]=obj;editIndex=-1}
+render();e.target.reset();show('data');
+}
+function render(){
+table.innerHTML="";
+data.forEach((d,i)=>{
+table.innerHTML+=`
+<tr>
+<td>${d.n}</td><td>${d.u}</td><td>${d.j}</td>
+<td>${d.l}</td><td>${d.k}</td>
+<td>
+<button class="btn-edit" onclick="edit(${i})">Edit</button>
+<button class="btn-hapus" onclick="hapus(${i})">Hapus</button>
+</td>
+</tr>`;
+});
+}
+function hapus(i){data.splice(i,1);render()}
+function edit(i){
+let d=data[i];
+nama.value=d.n;umur.value=d.u;jk.value=d.j;layananP.value=d.l;keluhan.value=d.k;
+editIndex=i;show('daftar');
+}
+</script>
+
+</body>
+</html>
